@@ -315,6 +315,7 @@ func TweakTaprootPrivKey(privKey btcec.PrivateKey,
 	tapTweakHash := chainhash.TaggedHash(
 		chainhash.TagTapTweak, schnorrKeyBytes, scriptRoot,
 	)
+	fmt.Println("tapTweakHash=",tapTweakHash.String())
 
 	// Map the private key to a ModNScalar which is needed to perform
 	// operation mod the curve order.
