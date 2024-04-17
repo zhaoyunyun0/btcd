@@ -254,6 +254,7 @@ func ComputeTaprootOutputKey(pubKey *btcec.PublicKey,
 		chainhash.TagTapTweak, schnorr.SerializePubKey(internalKey),
 		scriptRoot,
 	)
+	fmt.Println("tapTweakHash=",tapTweakHash.String())
 
 	// With the tap tweak computed,  we'll need to convert the merkle root
 	// into something in the domain we can manipulate: a scalar value mod
